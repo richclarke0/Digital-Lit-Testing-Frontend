@@ -1,5 +1,3 @@
-import { MDBContainer, MDBCol } from 'mdb-react-ui-kit'
-
 export default function Component(props) {
     return (
         <div className="p-4 text-center bg-dark">
