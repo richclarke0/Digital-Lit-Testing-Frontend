@@ -11,6 +11,7 @@ export default function MainView(props) {
     const [questions, setQuestions] = useState(null)
 
     const URL = "https://digital-lit-questions.herokuapp.com/questions"
+    const POSTURL = "https://digital-lit-questions.herokuapp.com/question"
     console.log("questions null?", questions)
 
     const getQuestions = async () => {
@@ -51,7 +52,7 @@ export default function MainView(props) {
 
                 {/* <Route path="/question/edit/:id" element={<EditQuestion />} /> */}
 
-                {/* <Route path="/question/new/" element={<NewQuestion />} /> */}
+                <Route path="/question/new/" element={<NewQuestion getQuestions={getQuestions} URL={POSTURL}/>} />
 
             </Routes>
         </main>
