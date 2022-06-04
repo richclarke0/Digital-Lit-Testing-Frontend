@@ -25,7 +25,7 @@ function Index(props) {
     return <div className="list">
      { props.questions.map((entry) => (
        //enter the lenght you want here, or use magic to reassign the value
-      questionSwitcher(entry, 29)
+      questionSwitcher(entry, 32)
       )) }
     </div>
   }

@@ -70,7 +70,7 @@ console.log("newQuestion props", props.URL)
 
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="newForm" onSubmit={handleSubmit}>
       <input
         type="text"
         value={newForm.type}

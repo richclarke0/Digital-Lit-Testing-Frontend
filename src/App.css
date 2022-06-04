@@ -4,41 +4,6 @@
   display: grid;
   grid-template-rows: 1fr 8fr 1fr;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
   
 .item {
   /* display: flex; */
@@ -53,6 +18,7 @@
   display: flex;
   flex-flow: row nowrap;
   align-items:center;
+  padding-left: .3em
 }
   .item img {
     max-width: 50px;
@@ -60,11 +26,72 @@
     margin-right: .2em;
   };
 
-  .item > p {
+  .item a p {
     text-align: justify;
     /* margin-top: 2em; */
+    margin: 5em
   }
 
-  .list {
+  .show {
+    padding: 1em;
+    width: 90%
+  }
 
+  .show img {
+    max-width: 70px;
+    max-height: 70px
+  }
+
+  .show select {
+    width: 100%
+  }
+
+  .icondisp {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  .edit img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .edit form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+
+  .edit form input {
+    margin: .1em;
+    width: 100%;
+  }
+
+  .edit {
+    padding: 1em;
+    justify-content: center;
+  }
+
+  .edit > div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+
+  .edit form div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%
+  }
+
+  .newForm {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1em;
+  }
+
+  .newForm input {
+    margin: .1em;
   }

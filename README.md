@@ -1,3 +1,33 @@
+
+# A full-stack React App: Digital Lit Questions!
+
+This app uses React, Express, Mongoose, MongoDB, and a bunch of other stuff I won't get into. Here are the two repos:
+
+- Frontend: [github.com/richclarke0/Digital-Lit-Testing-Frontend](https://www.github.com/richclarke0/Digital-Lit-Testing-Frontend)
+- Backend: [github.com/richclarke0/Digital-Lit-Testing-Backend](https://github.com/richclarke0/Digital-Lit-Testing-Backend)
+
+There is *some* styling, not too much. I completed the vast majority of MVP (and some more!) for this project in one epic coding session. I was pretty burnt, so I kind of did the bare minimum. Still looks pretty good though.
+
+On the show page, if you select an answer from the drop-down it will tell you if it's correct or not!
+
+Here are some screenies:
+| 1 | 2 | 3 | 4 | 5 | 6 |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| [![img](./img/1.png)](./img/1.png) | [![img](./img/2.png)](./img/2.png) | [![img](./img/3.png)](./img/3.png) | [![img](./img/4.png)](./img/4.png) | [![img](./img/5.png)](./img/5.png) |[![img](./img/6.png)](./img/6.png)
+
+
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+
+
 ## Project
 
 [Link to MD for Bootstrap 5 and React 17](https://mdbootstrap.com/docs/b5/react/)

@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom"
 import { useEffect, useState } from "react"
 
 import Index from "../pages/Index"
-import ShowQuestion from "../pages/showQuestion"
+import ShowQuestion from "../pages/ShowQuestion"
 import EditQuestion from "../pages/EditQuestion"
 import NewQuestion from "../pages/NewQuestion"
 
@@ -57,14 +57,14 @@ export default function MainView(props) {
                 
                 element={<Index getQuestions={getQuestions} questions={questions} />} />
 
-                <Route path="/question/:id" 
-                element={<ShowQuestion 
+                <Route path="/question/edit/:id" 
+                element={<EditQuestion 
                 deleteQuestion={deleteQuestion} 
                 updateQuestion={updateQuestion}
                 questions={questions}/>} 
                 />
 
-                {/* <Route path="/question/edit/:id" element={<EditQuestion />} /> */}
+                <Route path="/question/:id" element={<ShowQuestion questions={questions}/>} />
 
                 <Route path="/question/new/" 
                 element={<NewQuestion 
