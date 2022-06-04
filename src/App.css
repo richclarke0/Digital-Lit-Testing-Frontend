@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
 }
 
 .App-logo {
@@ -36,3 +39,32 @@
     transform: rotate(360deg);
   }
 }
+  
+.item {
+  /* display: flex; */
+  /* flex-flow: row nowrap; */
+  /* justify-content: flex-start; */
+  padding: .2em;
+  text-align:left;
+  border-bottom: 1px solid grey;
+}
+
+.item a {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items:center;
+}
+  .item img {
+    max-width: 50px;
+    /* float: left; */
+    margin-right: .2em;
+  };
+
+  .item > p {
+    text-align: justify;
+    /* margin-top: 2em; */
+  }
+
+  .list {
+
+  }
