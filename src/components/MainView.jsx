@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom"
 import { useEffect, useState } from "react"
 
 import Index from "../pages/Index"
-import Question from "../pages/showQuestion"
+import ShowQuestion from "../pages/showQuestion"
 import EditQuestion from "../pages/EditQuestion"
 import NewQuestion from "../pages/NewQuestion"
 
@@ -21,18 +21,27 @@ export default function MainView(props) {
         // console.log("set questions", questions)
     }
 
-    // const newQuestion = async (question) => {
-    //     // make post request to create people
-    //     await fetch(URL, {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "Application/json",
-    //         },
-    //         body: JSON.stringify(question),
-    //     })
-    //     // update list of Questions
-    //     getQuestions()
-    // }
+    const deleteQuestion = async (id) => {
+        // make delete request to create people
+        await fetch(POSTURL +"/"+ id, {
+          method: "DELETE",
+        })
+        // getQuestions()
+      }
+
+
+      const updateQuestion = async (question, id) => {
+        // make put request
+        await fetch(POSTURL + "/" + id, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "Application/json",
+          },
+          body: JSON.stringify(question),
+        })
+        // update list of
+        getQuestions()
+      }
 
     useEffect(() => {
         getQuestions()
@@ -48,7 +57,12 @@ export default function MainView(props) {
                 
                 element={<Index getQuestions={getQuestions} questions={questions} />} />
 
-                {/* <Route path="/question/:id" element={<ShowQuestion />} /> */}
+                <Route path="/question/:id" 
+                element={<ShowQuestion 
+                deleteQuestion={deleteQuestion} 
+                updateQuestion={updateQuestion}
+                questions={questions}/>} 
+                />
 
                 {/* <Route path="/question/edit/:id" element={<EditQuestion />} /> */}
 

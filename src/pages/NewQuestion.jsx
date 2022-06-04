@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 
 
@@ -69,18 +68,6 @@ console.log("newQuestion props", props.URL)
     // Navigate("/")
   }
 
-  //loaded
-  // const loaded = () => {
-  //   return props.people.map((person) => (
-  //     <div key={person._id} className="person">
-  //       <Link to={`/people/${person._id}`}>
-  //         <h1>{person.name}</h1>
-  //       </Link>
-  //       <img src={person.image} alt={person.name} />
-  //       <h3>{person.title}</h3>
-  //     </div>
-  //   ))
-  // }
 
   return (
     <form onSubmit={handleSubmit}>

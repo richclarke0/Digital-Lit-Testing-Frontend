@@ -14,7 +14,7 @@ export default function question({entry, length}) {
         if (entry.img !== "" && !length) {
             
             return <div key={entry._id} className="item">
-                <Link to={`/questions/${entry._id}`}>
+                <Link to={`/question/${entry._id}`}>
                     <img className=" rounded float-left" src={entry.img} alt="" />
                     <RegularQuestion question={entry.question} />
                     {/* "imgnolength" */}
@@ -24,7 +24,7 @@ export default function question({entry, length}) {
             //if icon and long question
             //displays img and truncates question with length
             return <div key={entry._id} className="item">
-                <Link to={`/questions/${entry._id}`}>
+                <Link to={`/question/${entry._id}`}>
                     <img className=" rounded float-left" src={entry.img} alt="" />
                     <TruncatedQuestion question={entry.question} length={length} />
                     {/* "imglength" */}
@@ -34,7 +34,7 @@ export default function question({entry, length}) {
             //if no icon and long question
             //omits img and displays truncated question
             return <div key={entry._id} className="item">
-                <Link to={`/questions/${entry._id}`}>
+                <Link to={`/question/${entry._id}`}>
                     {/* <p className="text-dark fs-5">{entry.question.slice(0, length) + "..."}</p> */}
                     <TruncatedQuestion question={entry.question} length={length+3} />
                     {/* "noimglength" */}
@@ -43,7 +43,7 @@ export default function question({entry, length}) {
         } else {
             //final, no icon and short question, displays whole question
             return <div key={entry._id} className="item">
-                <Link to={`/questions/${entry._id}`}>
+                <Link to={`/question/${entry._id}`}>
                     {/* <p className="text-dark fs-5">{entry.question.slice(0, length) + "..."}</p> */}
                     <RegularQuestion question={entry.question} />
                     {/* "noimgnolength" */}
