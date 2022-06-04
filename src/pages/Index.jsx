@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom"
-import Question from "../components/questionListDisplay/Question.jsx"
+import QuestionComponent from "../components/questionListDisplay/Question.jsx"
+import {useEffect} from "react"
 
 function Index(props) {
   // loaded function
-  console.log("props", props)
+
+  useEffect(() => {
+    props.getQuestions()
+    console.log("index useeffect")
+}, [])
+
   const loaded = () => {
     //add a parent container with scroll and start at top
     //change list item to left-align
@@ -12,8 +18,8 @@ function Index(props) {
 
     function questionSwitcher(entry, length) {
       if (entry.question.length > length) {
-        return <Question entry={entry} length={length} />
-      } else return <Question entry={entry} />
+        return <QuestionComponent entry={entry} length={length} />
+      } else return <QuestionComponent entry={entry} />
     }
 
     return <div className="list">

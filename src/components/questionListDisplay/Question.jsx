@@ -2,15 +2,16 @@ import TruncatedQuestion from "./truncation/truncatedQuestion"
 import RegularQuestion from "./truncation/regularQuestion"
 import { Link } from "react-router-dom"
 
-
+//question component
 export default function question({entry, length}) {
-    console.log("question entry", entry)
-    console.log("question length", length)
+    // console.log("question entry", entry)
+    // console.log("question length", length)
+    
     //the thinking
     function icon(entry, length) {
         //if icon and short question
         //displays img, displays entire question
-        if (entry.img != "" && !length) {
+        if (entry.img !== "" && !length) {
             
             return <div key={entry._id} className="item">
                 <Link to={`/questions/${entry._id}`}>
@@ -19,7 +20,7 @@ export default function question({entry, length}) {
                     {/* "imgnolength" */}
                 </Link>
             </div>
-        } else if (entry.img != "" && length > 0) {
+        } else if (entry.img !== "" && length > 0) {
             //if icon and long question
             //displays img and truncates question with length
             return <div key={entry._id} className="item">

@@ -1,7 +1,11 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { Navigate, useNavigate } from "react-router"
+import { useNavigate } from "react-router-dom"
+
+
+
 export default function NewQuestion(props) {
+  let redirect = useNavigate()
 console.log("newQuestion props", props.URL)
   // state for formData
   const [newForm, setNewForm] = useState({
@@ -23,7 +27,6 @@ console.log("newQuestion props", props.URL)
       },
       body: JSON.stringify(formData),
     })
-    //refresh page
   }
 
   // handleChange function for form
@@ -59,7 +62,10 @@ console.log("newQuestion props", props.URL)
       img: "",
       answer: ""
     })
-    // useNavigate("/", {replace: true})
+    // props.setRefresh(props.refresh * -1)
+    // console.log("refresh", props.refresh)
+    // props.getQuestions()
+    redirect("/", {replace: true})
     // Navigate("/")
   }
 
